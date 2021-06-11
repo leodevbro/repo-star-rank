@@ -1,12 +1,13 @@
 .App {
-    color: blue;
+    font-family: "Laila", sans-serif;
+    // font-family: "Saira", sans-serif;
 }
 
 .repoItem {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: start;
+    justify-content: flex-start;
     border: 1px solid red;
     .sectionImage {
         width: 100px;
@@ -22,6 +23,8 @@
         border: 1px solid green;
 
         .repoName {
+            font-family: "Saira", sans-serif;
+            font-size: 20px;
         }
 
         .repoDescription {
