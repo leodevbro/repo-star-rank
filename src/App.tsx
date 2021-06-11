@@ -1,9 +1,9 @@
 import React from "react";
 
-import "./App.css";
+import "./App.scss";
 
-const SingleItem = () => {
-    return <div>hi</div>;
+const SingleRepo = () => {
+    return <div>Hi</div>;
 };
 
 function App() {
