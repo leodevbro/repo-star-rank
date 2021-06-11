@@ -27,8 +27,8 @@ body {
     margin-top: 30px;
     // border: 1px solid red;
     .sectionImage {
-        width: 100px;
-        height: 100px;
+        width: 112px;
+        height: 112px;
         padding: 10px;
         // border: 1px solid blue;
 
@@ -52,6 +52,7 @@ body {
             font-family: "Saira", sans-serif;
             font-size: 20px;
             margin-left: 4px;
+            white-space: nowrap;
             a {
                 color: rgb(255, 123, 0);
                 text-decoration: none;

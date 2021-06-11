@@ -90,27 +90,28 @@ const RepoList: React.FC = () => {
 
         // console.log(data);
 
-        const jsoned = await data.json();
-
-        if (data.status === 200 && jsoned.items) {
-            const repoList: IRepo[] = jsoned.items.map((item: any) => {
-                return {
-                    id: item.id,
-                    name: item.name,
-                    url: item.url,
-                    created_at: item.created_at,
-                    description: item.description,
-                    stargazers_count: item.stargazers_count, // count of stars
-                    open_issues_count: item.open_issues_count, // count of open issues
-                    html_url: item.html_url,
-                    owner: {
-                        id: item.owner.id,
-                        avatar_url: item.owner.avatar_url,
-                        login: item.owner.login,
-                    },
-                };
-            });
-            setRepoArr(repoList);
+        if (data.status === 200) {
+            const jsoned = await data.json();
+            if (jsoned.items) {
+                const repoList: IRepo[] = jsoned.items.map((item: any) => {
+                    return {
+                        id: item.id,
+                        name: item.name,
+                        url: item.url,
+                        created_at: item.created_at,
+                        description: item.description,
+                        stargazers_count: item.stargazers_count, // count of stars
+                        open_issues_count: item.open_issues_count, // count of open issues
+                        html_url: item.html_url,
+                        owner: {
+                            id: item.owner.id,
+                            avatar_url: item.owner.avatar_url,
+                            login: item.owner.login,
+                        },
+                    };
+                });
+                setRepoArr([...repoArr, ...repoList]);
+            }
         } else {
             alert("Please Refresh");
         }
