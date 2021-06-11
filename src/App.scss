@@ -1,18 +1,40 @@
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    margin-bottom: 50px;
+}
+
 .App {
     font-family: "Laila", sans-serif;
     // font-family: "Saira", sans-serif;
+    display: flex;
+    justify-content: center;
 }
-
+.repoListBox {
+    max-width: 1200px;
+}
 .repoItem {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: flex-start;
-    border: 1px solid red;
+    margin-top: 30px;
+    // border: 1px solid red;
     .sectionImage {
         width: 100px;
         height: 100px;
-        border: 1px solid blue;
+        padding: 10px;
+        // border: 1px solid blue;
+
+        @media screen and (max-width: 450px) {
+            // width: 100%;
+        }
 
         img {
             width: 100%;
@@ -20,16 +42,36 @@
     }
 
     .sectionDetails {
-        border: 1px solid green;
+        // display: flex;
+        width: calc(100% - 134px);
+        padding-left: 10px;
+        // border: 1px solid green;
+        min-width: 250px;
 
         .repoName {
             font-family: "Saira", sans-serif;
             font-size: 20px;
+            margin-left: 4px;
+            a {
+                color: rgb(255, 123, 0);
+                text-decoration: none;
+                padding-left: 6px;
+                padding-right: 6px;
+
+                border-radius: 8px;
+                border: 2px solid rgba(255, 166, 0, 0);
+                &:hover {
+                    background-color: rgb(255, 246, 222);
+                    border-radius: 8px;
+                    border: 2px solid rgba(255, 166, 0, 0.082);
+                }
+            }
         }
 
         .repoDescription {
-            border: 1px solid yellow;
+            // border: 1px solid yellow;
             overflow: hidden;
+            margin-left: 10px;
             // max-height: 30px;
 
             &.hasValue {
@@ -41,6 +83,34 @@
         }
 
         .repoNumbers {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+
+            .nStars {
+                border: 2px solid rgb(227, 222, 228);
+                border-radius: 6px;
+                padding-left: 5px;
+                padding-right: 5px;
+
+                margin-left: 10px;
+                margin-top: 5px;
+            }
+
+            .nOpenIssues {
+                border: 2px solid rgb(227, 222, 228);
+                border-radius: 6px;
+                padding-left: 5px;
+                padding-right: 5px;
+
+                margin-left: 10px;
+                margin-top: 5px;
+            }
+
+            .timeAndAuthor {
+                margin-left: 10px;
+                margin-top: 5px;
+            }
         }
     }
 }

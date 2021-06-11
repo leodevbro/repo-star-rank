@@ -57,10 +57,12 @@ const SingleRepo: React.FC<{ apiObj: IRepo }> = ({ apiObj }) => {
                 </div>
                 <div className={"repoNumbers"}>
                     <div className={"nStars"}>
-                        Stars: {prettierNumber(apiObj.stargazers_count)}
+                        <strong>Stars:</strong>{" "}
+                        {prettierNumber(apiObj.stargazers_count)}
                     </div>
-                    <div className={"nIssues"}>
-                        Open Issues: {prettierNumber(apiObj.open_issues_count)}
+                    <div className={"nOpenIssues"}>
+                        <strong>Open Issues:</strong>{" "}
+                        {prettierNumber(apiObj.open_issues_count)}
                     </div>
                     <div className={"timeAndAuthor"}>
                         Submited {daysAgo} days ago by {apiObj.owner.login}
@@ -71,7 +73,7 @@ const SingleRepo: React.FC<{ apiObj: IRepo }> = ({ apiObj }) => {
     );
 };
 
-const RepoList = () => {
+const RepoList: React.FC = () => {
     const [repoArr, setRepoArr] = useState<IRepo[]>([]);
 
     const fetchRepos = async () => {
