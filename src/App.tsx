@@ -151,6 +151,17 @@ const RepoList: React.FC = () => {
 function App() {
     return (
         <div className="App">
+            <div className={"mainIconBox"}>
+                <img
+                    className={"mainIcon"}
+                    src="https://i.ibb.co/51RKxtC/logo192.png"
+                    alt="Star Icon"
+                />
+            </div>
+            <div className={"titleBox"}>
+                <h1>Most starred Github repos</h1>
+                <h2>that were created in the last 30 days</h2>
+            </div>
             <RepoList />
         </div>
     );

@@ -14,11 +14,32 @@ body {
     font-family: "Laila", sans-serif;
     // font-family: "Saira", sans-serif;
     display: flex;
+    flex-wrap: wrap;
+
     justify-content: center;
+
+    .mainIconBox {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+
+        justify-content: center;
+        .mainIcon {
+            width: 192px;
+            height: 192px;
+        }
+    }
+
+    .titleBox {
+        width: 100%;
+        text-align: center;
+    }
+
+    .repoListBox {
+        max-width: 1200px;
+    }
 }
-.repoListBox {
-    max-width: 1200px;
-}
+
 .repoItem {
     display: flex;
     flex-wrap: wrap;
