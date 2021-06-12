@@ -79,6 +79,8 @@ const RepoList: React.FC = () => {
     const [repoArr, setRepoArr] = useState<IRepo[]>([]);
     const [pageNumber, setPageNumber] = useState(1);
 
+    const myAbortController = new AbortController();
+
     const fetchRepos = async () => {
         const daysAgo = 30;
         const currDate = new Date();
@@ -88,7 +90,8 @@ const RepoList: React.FC = () => {
         const agoDateString = agoDate.toISOString().slice(0, 10);
 
         const data = await fetch(
-            `https://api.github.com/search/repositories?q=created:>${agoDateString}&sort=stars&order=desc&page=${pageNumber}`
+            `https://api.github.com/search/repositories?q=created:>${agoDateString}&sort=stars&order=desc&page=${pageNumber}`,
+            { signal: myAbortController.signal }
         );
 
         // console.log(data);
@@ -126,6 +129,7 @@ const RepoList: React.FC = () => {
 
     useEffect(() => {
         fetchRepos();
+        return () => myAbortController.abort();
     }, [pageNumber]);
 
     const handleContainerOnBottom = useCallback(() => {
