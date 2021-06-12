@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/repo-star-rank/static/css/main.4a6c1cc4.chunk.css",
-    "main.js": "/repo-star-rank/static/js/main.4aa6b076.chunk.js",
-    "main.js.map": "/repo-star-rank/static/js/main.4aa6b076.chunk.js.map",
+    "main.css": "/repo-star-rank/static/css/main.2727fe3c.chunk.css",
+    "main.js": "/repo-star-rank/static/js/main.5645943d.chunk.js",
+    "main.js.map": "/repo-star-rank/static/js/main.5645943d.chunk.js.map",
     "runtime-main.js": "/repo-star-rank/static/js/runtime-main.91f197a6.js",
     "runtime-main.js.map": "/repo-star-rank/static/js/runtime-main.91f197a6.js.map",
     "static/js/2.6462f260.chunk.js": "/repo-star-rank/static/js/2.6462f260.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.64c80b93.chunk.js": "/repo-star-rank/static/js/3.64c80b93.chunk.js",
     "static/js/3.64c80b93.chunk.js.map": "/repo-star-rank/static/js/3.64c80b93.chunk.js.map",
     "index.html": "/repo-star-rank/index.html",
-    "static/css/main.4a6c1cc4.chunk.css.map": "/repo-star-rank/static/css/main.4a6c1cc4.chunk.css.map",
+    "static/css/main.2727fe3c.chunk.css.map": "/repo-star-rank/static/css/main.2727fe3c.chunk.css.map",
     "static/js/2.6462f260.chunk.js.LICENSE.txt": "/repo-star-rank/static/js/2.6462f260.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.91f197a6.js",
     "static/js/2.6462f260.chunk.js",
-    "static/css/main.4a6c1cc4.chunk.css",
-    "static/js/main.4aa6b076.chunk.js"
+    "static/css/main.2727fe3c.chunk.css",
+    "static/js/main.5645943d.chunk.js"
   ]
 }
