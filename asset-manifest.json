@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/repo-star-rank/static/css/main.2727fe3c.chunk.css",
-    "main.js": "/repo-star-rank/static/js/main.5645943d.chunk.js",
-    "main.js.map": "/repo-star-rank/static/js/main.5645943d.chunk.js.map",
+    "main.js": "/repo-star-rank/static/js/main.fed68b0c.chunk.js",
+    "main.js.map": "/repo-star-rank/static/js/main.fed68b0c.chunk.js.map",
     "runtime-main.js": "/repo-star-rank/static/js/runtime-main.91f197a6.js",
     "runtime-main.js.map": "/repo-star-rank/static/js/runtime-main.91f197a6.js.map",
     "static/js/2.6462f260.chunk.js": "/repo-star-rank/static/js/2.6462f260.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.91f197a6.js",
     "static/js/2.6462f260.chunk.js",
     "static/css/main.2727fe3c.chunk.css",
-    "static/js/main.5645943d.chunk.js"
+    "static/js/main.fed68b0c.chunk.js"
   ]
 }
