@@ -42,7 +42,11 @@ const SingleRepo: React.FC<{ apiObj: IRepo }> = ({ apiObj }) => {
             </div>
             <div className={"sectionDetails"}>
                 <div className={"repoName"}>
-                    <a href={apiObj.html_url} target={"_blank"}>
+                    <a
+                        href={apiObj.html_url}
+                        target={"_blank"}
+                        rel="noreferrer"
+                    >
                         {apiObj.name}
                     </a>
                 </div>

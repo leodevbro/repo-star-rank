@@ -1,5 +1,6 @@
 {
     "name": "starrank",
+    "homepage": "https://leodevbro.github.io/repo-star-rank/",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
