@@ -1,4 +1,8 @@
-
+<p align="center"><img
+  src="https://i.ibb.co/51RKxtC/logo192.png"
+  alt="Star Icon"
+  width="128px"
+/></p>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
