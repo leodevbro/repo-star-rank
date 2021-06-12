@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 
 import "./App.scss";
 import { diffInDays, prettierNumber } from "./utils";
+
+import { useBottomScrollListener } from "react-bottom-scroll-listener";
 
 interface IRepo {
     id: number;
@@ -75,6 +77,7 @@ const SingleRepo: React.FC<{ apiObj: IRepo }> = ({ apiObj }) => {
 
 const RepoList: React.FC = () => {
     const [repoArr, setRepoArr] = useState<IRepo[]>([]);
+    const [pageNumber, setPageNumber] = useState(1);
 
     const fetchRepos = async () => {
         const daysAgo = 30;
@@ -85,7 +88,7 @@ const RepoList: React.FC = () => {
         const agoDateString = agoDate.toISOString().slice(0, 10);
 
         const data = await fetch(
-            `https://api.github.com/search/repositories?q=created:>${agoDateString}&sort=stars&order=desc`
+            `https://api.github.com/search/repositories?q=created:>${agoDateString}&sort=stars&order=desc&page=${pageNumber}`
         );
 
         // console.log(data);
@@ -113,13 +116,28 @@ const RepoList: React.FC = () => {
                 setRepoArr([...repoArr, ...repoList]);
             }
         } else {
-            alert("Please Refresh");
+            const jsoned = await data.json();
+            console.log(jsoned);
+            if (jsoned.message) {
+                // alert(jsoned.message);
+            }
         }
     };
 
     useEffect(() => {
         fetchRepos();
+    }, [pageNumber]);
+
+    const handleContainerOnBottom = useCallback(() => {
+        console.log(
+            "I am at bottom in optional container! " +
+                Math.round(performance.now())
+        );
+
+        setPageNumber((x) => x + 1);
     }, []);
+
+    useBottomScrollListener(handleContainerOnBottom);
 
     return (
         <div className={"repoListBox"}>
